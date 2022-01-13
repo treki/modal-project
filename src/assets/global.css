@@ -4,3 +4,31 @@ body{
 p{
     font-style: italic ;
 }
+button.blue{
+    width: 60px;
+        background: rgb(43, 144, 222);
+        color: rgb(255, 255, 255);
+        padding: 8px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        text-decoration: none;
+        margin: 15px;
+    }
+button.blue:hover{
+    background: rgb(4, 4, 159);
+    color: ;
+}
+button.red{
+    width: 60px;
+    background: rgb(213, 77, 77);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 15px;
+}
+button.red:hover{
+background: rgb(255, 25, 0);
+color: ;
+}

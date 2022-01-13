@@ -1,8 +1,11 @@
 <template>
-    <div class="backdrop" @click="closeModal">
-        <div class="modal" :class="{ sale: theme === 'sale'}">
+    <div class="backdrop" @click.self="closeModal">
+        <div class="modal" :class="{ blue: theme === 'blue'}">
             <h1>{{ header }}</h1>
-            <p>{{ text }}</p>
+           <slot>Default content</slot>
+           <div class="actions">
+               <slot name="link"></slot>
+           </div>
         </div>
     </div>
 </template>
@@ -17,15 +20,15 @@ export default {
     }
 }
 </script>
-<style scoped>
+
+<style >
 .modal {
     width: 400px;
     padding: 20px;
     margin: 100px auto;
-    background: rgb(193, 189, 189);
+    background: rgb(228, 72, 72);
     border-radius: 10px;
 }
-
 .backdrop{
     top: 0;
     position: fixed;
@@ -33,14 +36,36 @@ export default {
     width: 100%;
     height: 100%;
 }
-h1{
-    color: rgb(16, 54, 150);
+.modal h1{
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0;
+
 }
-.modal.sale{
-    background-color: crimson;
-    color: white;
+.modal p{
+    font-style: normal;
 }
-.modal.sale h1{
-    color: white;
+.modal.blue{
+    background: rgb(43, 144, 222);
 }
+.modal  .actions{
+color: white;
+}
+.modal .actions{
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+.modal .actions a{
+    color: rgb(254, 254, 254);
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 10px;
+}
+.modal .actions a:hover{
+    background: rgb(244, 244, 244);
+    color: black;
+}
+
 </style>

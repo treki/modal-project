@@ -16,7 +16,6 @@ button.blue{
     }
 button.blue:hover{
     background: rgb(4, 4, 159);
-    color: ;
 }
 button.red{
     width: 60px;
@@ -30,5 +29,4 @@ button.red{
 }
 button.red:hover{
 background: rgb(255, 25, 0);
-color: ;
 }
